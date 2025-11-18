@@ -77,16 +77,30 @@ src/
 ├── types.ts                           # TypeScript types
 └── App.tsx            
 
-▶️ *Getting Started*
+## Getting Started
 
-# Install dependencies
+Follow these steps to set up and run the project locally.
+
+## 📦 1. Install Dependencies
+```bash
 yarn install
+```
 
-# One-time MSW setup
+## 🛠️ 2. One-time MSW Setup
+Initialize the Mock Service Worker:
+```bash
 npx msw init public --save
+```
 
-# Start the application
+## 🚀 3. Start the Application
+Runs the app in development mode.  
+Open http://localhost:5173 in your browser.
+```bash
 yarn dev
+```
 
-# Run tests
+## 🧪 4. Run Tests
+Launch the test runner in interactive watch mode.
+```bash
 yarn test
+```
