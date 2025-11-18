@@ -1,76 +1,69 @@
-📦 *Listings Manager*
+# 📦 Listings Manager
+
 A responsive, accessible product catalog application built using React + TypeScript, based on the iGnosis Tech coding exercise.
 
-💡 *Key Features*
+## 💡 Key Features
 
-🔍 Smart Search
+### 🔍 Smart Search
+* **Real-time search** with 300ms debouncing to reduce unnecessary API calls.
+* **Clear button** for quick reset.
+* **Accessible** with proper ARIA labels.
 
-Real-time search with 300ms debouncing to reduce unnecessary API calls
-Clear button for quick reset
-Accessible with proper ARIA labels
+### 🏷️ Category Filtering
+* Filter by **Electronics, Home, Clothing, Books**, or view all.
+* Instant updates when selection changes.
+* **Auto-reset**: Resets to page 1 automatically for better UX.
 
-🏷️ Category Filtering
-
-Filter by Electronics, Home, Clothing, Books, or view all
-Instant updates when selection changes
-Resets to page 1 automatically (better UX)
-
-📊 Flexible Sorting
+### 📊 Flexible Sorting
 Four sorting options to help users find what they need:
+* Name (A-Z / Z-A)
+* Price (Low to High / High to Low)
+* *Applied client-side for instant results.*
 
-Name (A-Z / Z-A)
-Price (Low to High / High to Low)
-Applied client-side for instant results
+### 📄 Smart Pagination
+* **Ellipsis display** for large page counts (prevents overcrowding).
+* Previous/Next navigation.
+* Direct page number access.
+* **Smooth scroll** to top on page change.
+* Fully keyboard accessible.
 
-📄 Smart Pagination
+### 🎯 Product Details
+* Clean, focused view of individual products.
+* All information at a glance.
+* Quick back navigation.
+* Proper loading states so users never wonder what's happening.
 
-Ellipsis display for many pages (prevents overcrowding)
-Previous/Next navigation
-Direct page number access
-Smooth scroll to top on page change
-Keyboard accessible
+### 🎨 Thoughtful UI States
+* **Loading:** Spinner with helpful message.
+* **Empty:** Context-aware messages ("No products found" vs "Try adjusting filters").
+* **Error:** Clear error message with retry button.
+* **Success:** Clean, readable product grid.
 
-🎯 Product Details
+---
 
-Clean, focused view of individual products
-All information at a glance
-Quick back navigation
-Proper loading states so users never wonder what's happening
+## 🏗️ Tech Stack
 
-🎨 Thoughtful UI States
+* **Core:** React + TypeScript
+* **Build Tool:** Vite
+* **Routing:** React Router
+* **API Mocking:** MSW (Mock Service Worker)
+* **Testing:** Vitest + Testing Library
 
-Loading: Spinner with helpful message
-Empty: Context-aware messages ("No products found" vs "Try adjusting filters")
-Error: Clear error message with retry button
-Success: Clean, readable product grid
+---
 
-🏗️ *Tech Stack*
+## 📁 Project Structure
 
-React + TypeScript
-Vite
-React Router
-MSW for API mocking
-Vitest + Testing Library for tests
-
-🧪 *Testing*
-
-Covers realistic user behavior:
-Filtering, search, and sorting
-Pagination
-Detail page
-Loading/empty/error states
-
-📁 *Project Structure*
+```bash
 src/
 ├── features/
 │   └── products/
-│       ├── ProductList.tsx           # Main list component
+│       ├── ProductList.tsx            # Main list component
 │       ├── ProductList.css
 │       ├── ProductList.test.tsx
-│       ├── ProductDetails.tsx        # Detail view
+│       ├── ProductDetails.tsx         # Detail view
 │       ├── ProductDetails.css
 │       ├── ProductDetails.test.tsx
-│       └── components/               # Reusable components
+│       └── components/                # Reusable components
 │           ├── ProductCard.tsx
 │           ├── Toolbar.tsx
 │           ├── Pagination.tsx
@@ -78,11 +71,11 @@ src/
 │           ├── EmptyState.tsx
 │           └── ErrorState.tsx
 ├── mocks/
-│   ├── handlers.ts                   # MSW API handlers
+│   ├── handlers.ts                    # MSW API handlers
 │   └── data/
-│       └── products.json             # Mock data
-├── types.ts                          # TypeScript types
-└── App.tsx                           
+│       └── products.json              # Mock data
+├── types.ts                           # TypeScript types
+└── App.tsx            
 
 ▶️ *Getting Started*
 
