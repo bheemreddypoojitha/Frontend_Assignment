@@ -1,0 +1,99 @@
+📦 *Listings Manager*
+A responsive, accessible product catalog application built using React + TypeScript, based on the iGnosis Tech coding exercise.
+
+💡 *Key Features*
+
+🔍 Smart Search
+
+Real-time search with 300ms debouncing to reduce unnecessary API calls
+Clear button for quick reset
+Accessible with proper ARIA labels
+
+🏷️ Category Filtering
+
+Filter by Electronics, Home, Clothing, Books, or view all
+Instant updates when selection changes
+Resets to page 1 automatically (better UX)
+
+📊 Flexible Sorting
+Four sorting options to help users find what they need:
+
+Name (A-Z / Z-A)
+Price (Low to High / High to Low)
+Applied client-side for instant results
+
+📄 Smart Pagination
+
+Ellipsis display for many pages (prevents overcrowding)
+Previous/Next navigation
+Direct page number access
+Smooth scroll to top on page change
+Keyboard accessible
+
+🎯 Product Details
+
+Clean, focused view of individual products
+All information at a glance
+Quick back navigation
+Proper loading states so users never wonder what's happening
+
+🎨 Thoughtful UI States
+
+Loading: Spinner with helpful message
+Empty: Context-aware messages ("No products found" vs "Try adjusting filters")
+Error: Clear error message with retry button
+Success: Clean, readable product grid
+
+🏗️ *Tech Stack*
+
+React + TypeScript
+Vite
+React Router
+MSW for API mocking
+Vitest + Testing Library for tests
+
+🧪 *Testing*
+
+Covers realistic user behavior:
+Filtering, search, and sorting
+Pagination
+Detail page
+Loading/empty/error states
+
+📁 *Project Structure*
+src/
+├── features/
+│   └── products/
+│       ├── ProductList.tsx           # Main list component
+│       ├── ProductList.css
+│       ├── ProductList.test.tsx
+│       ├── ProductDetails.tsx        # Detail view
+│       ├── ProductDetails.css
+│       ├── ProductDetails.test.tsx
+│       └── components/               # Reusable components
+│           ├── ProductCard.tsx
+│           ├── Toolbar.tsx
+│           ├── Pagination.tsx
+│           ├── LoadingState.tsx
+│           ├── EmptyState.tsx
+│           └── ErrorState.tsx
+├── mocks/
+│   ├── handlers.ts                   # MSW API handlers
+│   └── data/
+│       └── products.json             # Mock data
+├── types.ts                          # TypeScript types
+└── App.tsx                           
+
+▶️ *Getting Started*
+
+# Install dependencies
+yarn install
+
+# One-time MSW setup
+npx msw init public --save
+
+# Start the application
+yarn dev
+
+# Run tests
+yarn test
